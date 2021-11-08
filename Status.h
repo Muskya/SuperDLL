@@ -37,19 +37,3 @@ namespace TheoDLL {
 	}
 }
 
-class Status
-{
-private:
-	uint8_t age;
-	const char* name;
-	TheoDLL::Action currentAction;
-public :
-	Status() = default;
-	Status(uint8_t age, const char* name, TheoDLL::Action action);
-
-	void status(); // calls all getters
-	uint8_t getAge() { return age; }
-	const char* getName() { return name; }
-	TheoDLL::Action getAction() { return currentAction; }
-};
-

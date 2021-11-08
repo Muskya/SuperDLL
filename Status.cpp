@@ -7,9 +7,6 @@ static bool anothervar;
 static float vector;
 
 namespace TheoDLL {
-	void dllStat() {
-		std::cout << "Hello from .DLL" << std::endl;
-	}
 
 	void sayHi(const char* msg) {
 		std::cout << msg << std::endl;
@@ -21,16 +18,3 @@ namespace TheoDLL {
 		_right = tmp;
 	}
 }
-
-Status::Status(uint8_t age, const char* name, TheoDLL::Action action) {
-	this->age = age;
-	this->name = name;
-	this->currentAction = action;
-}
-
-void Status::status() {
-	std::cout << this->getAge() << std::endl;
-	std::cout << this->getName() << std::endl;
-	std::cout << this->getAction() << std::endl;
-}
-
