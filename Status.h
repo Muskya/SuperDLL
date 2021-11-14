@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
-#include <Windows.h>
+#include <thread>
+#include <Windows.h> // Win32 API
 
 #ifdef SUPERDLL_EXPORTS
 #define SUPERDLL_API __declspec(dllexport)
@@ -10,9 +11,9 @@
 
 namespace TheoDLL {
 
-	extern "C" SUPERDLL_API void dllStat();
 	extern "C" SUPERDLL_API void sayHi(const char* msg);
 	extern "C" SUPERDLL_API void swap(DWORD & _left, DWORD & _right);
+	extern "C" SUPERDLL_API void doWindowsAPIStuff();
 
 	enum class Action { Sleeping, Working, Playing, Eating };
 	extern "C" std::ostream & operator<<(std::ostream & out, Action act) {

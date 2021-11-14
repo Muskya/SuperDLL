@@ -17,4 +17,14 @@ namespace TheoDLL {
 		_left = _right;
 		_right = tmp;
 	}
+
+	void doWindowsAPIStuff() {
+		while (true) {
+			if (GetAsyncKeyState(VK_LBUTTON))
+				std::cout << "Pressed left mouse button !" << std::endl;
+		}
+			
+		std::cout << "Thread ID: " << GetCurrentThreadId() << std::endl;
+		std::cout << "Process ID: " << GetCurrentProcessId() << std::endl;
+	}
 }
